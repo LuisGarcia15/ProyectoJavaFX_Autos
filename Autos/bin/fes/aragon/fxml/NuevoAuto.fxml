@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="584.0" prefWidth="807.0" style="-fx-background-color: #003478;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fes.aragon.controlador.NuevoAutoController">
+   <children>
+      <Label layoutX="24.0" layoutY="25.0" text="Nuevo Auto" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="33.0" />
+         </font>
+      </Label>
+      <VBox layoutX="12.0" layoutY="113.0" prefHeight="468.0" prefWidth="794.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="215.0" text="Marca:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtMarca" prefHeight="25.0" prefWidth="519.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets></TextField>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="215.0" text="Modelo:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtModelo" prefHeight="25.0" prefWidth="520.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="215.0" text="Año:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="chcAño" prefHeight="25.0" prefWidth="520.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="104.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="215.0" text="Estado:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="chcEstado" prefHeight="25.0" prefWidth="524.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="206.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="215.0" text="Número de puertas:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="chcNumPuertas" prefHeight="25.0" prefWidth="521.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="232.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="215.0" text="Transmisión:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="chcTransmision" prefHeight="25.0" prefWidth="522.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="246.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="215.0" text="Kilometraje:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtKilometraje" prefHeight="25.0" prefWidth="521.0" stylesheets="@../css/application.css" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="276.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="215.0" text="Precio:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtPrecio" prefHeight="25.0" prefWidth="520.0" stylesheets="@../css/application.css" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="215.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="215.0" text="Cantidad:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="chcCantidad" prefHeight="25.0" prefWidth="522.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="379.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="215.0" text="Color:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtColor" prefHeight="25.0" prefWidth="527.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="32.0" prefWidth="754.0" spacing="300.0">
+               <children>
+                  <Button fx:id="btnAceptar" mnemonicParsing="false" onAction="#nuevoAuto" stylesheets="@../css/application.css" text="Aceptar">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="CHECK_CIRCLE_ALT" />
+                     </graphic></Button>
+                  <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#cancelarAuto" stylesheets="@../css/application.css" text="Cancelar">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="CLOSE" />
+                     </graphic></Button>
+               </children>
+               <padding>
+                  <Insets left="180.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <ImageView fitHeight="100.0" fitWidth="295.0" layoutX="404.0" layoutY="5.0" pickOnBounds="true">
+         <image>
+            <Image url="@../recursos/logo_Ford.png" />
+         </image></ImageView>
+   </children>
+</Pane>

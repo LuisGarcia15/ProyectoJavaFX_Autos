@@ -1,0 +1,19 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.button{
+	-fx-background-color: #FFFFFF;
+}
+.button:hover{
+	-fx-background-color: #F0F0F0;
+}
+.button:pressed {
+	-fx-background-color: #878787
+}
+
+.text-input:error {
+	-fx-text-fill: white;
+	-fx-border-insets: 0;
+	-fx-border-width: 2px;
+	-fx-border-color: red;
+	-fx-border-style: hidden hidden solid hidden;
+	-fx-background-color: derive(red,99%);
+}
