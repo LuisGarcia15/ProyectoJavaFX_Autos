@@ -200,7 +200,7 @@ public class ModificarAutoController extends BaseController implements Initializ
 		boolean validoEstado = true;
 		boolean validoMarca = true;
 		boolean validoTrasmision = true;
-		boolean validoAño = true;
+		boolean validoAnio = true;
 		ObservableList<Auto> auto= tienda.getAutos();
 		for(int i = 0; i < auto.size(); i++) {
 			if(auto.get(i) == autos) {
@@ -219,12 +219,12 @@ public class ModificarAutoController extends BaseController implements Initializ
 				validoModelo = false;
 				validoMarca = false;
 				validoTrasmision = false;
-				validoAño = false;
+				validoAnio = false;
 				valido = false;
 				}
 			
 			if(validoColor == false && validoModelo == false && validoEstado == false && validoMarca == false 
-			&& validoTrasmision == false && validoAño == false) {
+			&& validoTrasmision == false && validoAnio == false) {
 				break;
 				}else {
 					validoColor = true;
