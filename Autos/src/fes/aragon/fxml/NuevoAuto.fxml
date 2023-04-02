@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="584.0" prefWidth="807.0" style="-fx-background-color: #003478;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fes.aragon.controlador.NuevoAutoController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="584.0" prefWidth="807.0" style="-fx-background-color: #003478;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fes.aragon.controlador.NuevoAutoController">
    <children>
       <Label layoutX="24.0" layoutY="25.0" text="Nuevo Auto" textFill="WHITE">
          <font>
@@ -55,7 +55,7 @@
                         <Font size="15.0" />
                      </font>
                   </Label>
-                  <ChoiceBox fx:id="chcAño" prefHeight="25.0" prefWidth="520.0" />
+                  <ChoiceBox fx:id="chcAnio" prefHeight="25.0" prefWidth="520.0" />
                </children>
             </HBox>
             <HBox layoutX="10.0" layoutY="104.0" prefHeight="100.0" prefWidth="200.0">

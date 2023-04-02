@@ -20,7 +20,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
-public class CambiarContraseñaController extends BaseController implements Initializable{
+public class CambiarContraseniaController extends BaseController implements Initializable{
 	private String mensaje = "";
     @FXML
     private Button btnAceptar;
@@ -55,8 +55,8 @@ public class CambiarContraseñaController extends BaseController implements Initi
     @Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
     	this.verificarEntrada(txtCorreo, TipoError.CORREO);
-    	this.verificarEntrada(txtNuevaContrasena, TipoError.CONTRASEÑA);
-		this.verificarEntrada(txtContrasenaAnterior, TipoError.CONTRASEÑA);
+    	this.verificarEntrada(txtNuevaContrasena, TipoError.CONTRASENIA);
+		this.verificarEntrada(txtContrasenaAnterior, TipoError.CONTRASENIA);
 		
 		File f = new File(System.getProperty("user.dir") + "/Usuarios/usuarios.fes");
 		try {
@@ -85,7 +85,7 @@ public class CambiarContraseñaController extends BaseController implements Initi
 			valido = false;
 		}
 
-		if (!this.contraseñaValido) {
+		if (!this.contraseniaValido) {
 			this.mensaje += "La contraseña no es valida, esta mal estructurado, debe contener"
 					+ " la primera letra en mayúscula seguido de entre 5  a 7 caracteres libres.\n\n";
 			valido = false;
@@ -117,10 +117,10 @@ public class CambiarContraseñaController extends BaseController implements Initi
 		boolean valido = false;
 		ArrayList<Usuario> usuarios = UsuariosArchivo.getUsuarios().getListaUsuarios();
 		for (int i = 0; i < usuarios.size(); i++) {
-			if (usuarios.get(i).getContraseña().equals(this.txtContrasenaAnterior.getText())
+			if (usuarios.get(i).getContrasenia().equals(this.txtContrasenaAnterior.getText())
 					&& usuarios.get(i).getCorreoElectronico().equals(this.txtCorreo.getText())) {
 				
-				if(usuarios.get(i).getContraseña().equals(this.txtNuevaContrasena.getText())) {
+				if(usuarios.get(i).getContrasenia().equals(this.txtNuevaContrasena.getText())) {
 					this.mensaje += "No es posible cambiar la contraseña por otra que este en uso. \n";
 					return valido;
 				}else {

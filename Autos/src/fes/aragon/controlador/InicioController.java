@@ -35,10 +35,10 @@ public class InicioController extends BaseController implements Initializable {
 	private Button btnRegistrarse;
 
 	@FXML
-	private Button btnRestaurarContraseña;
+	private Button btnRestaurarContrasenia;
 
 	@FXML
-	private TextField txtContraseña;
+	private TextField txtContrasenia;
 
 	@FXML
 	private TextField txtCorreoElectronico;
@@ -75,14 +75,14 @@ public class InicioController extends BaseController implements Initializable {
 	}
 
 	@FXML
-	void restablecerContraseña(ActionEvent event) {
+	void restablecerContrasenia(ActionEvent event) {
 		this.nuevaVentana("CambiarContrasena");
 	}
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		this.verificarEntrada(txtCorreoElectronico, TipoError.CORREO);
-		this.verificarEntrada(txtContraseña, TipoError.CONTRASEÑA);
+		this.verificarEntrada(txtContrasenia, TipoError.CONTRASENIA);
 	}
 
 	private boolean verificar() {
@@ -93,7 +93,7 @@ public class InicioController extends BaseController implements Initializable {
 			valido = false;
 		}
 
-		if (!this.contraseñaValido) {
+		if (!this.contraseniaValido) {
 			this.mensaje += "La contraseña no es valida, esta mal estructurado, debe contener"
 					+ " la primera letra en mayúscula seguido de entre 5  a 7 caracteres libres.\n\n";
 			valido = false;
@@ -105,8 +105,8 @@ public class InicioController extends BaseController implements Initializable {
 			valido = false;
 		}
 
-		if ((this.txtContraseña.getText() == null)
-				|| (this.txtContraseña.getText() != null && this.txtContraseña.getText().isEmpty())) {
+		if ((this.txtContrasenia.getText() == null)
+				|| (this.txtContrasenia.getText() != null && this.txtContrasenia.getText().isEmpty())) {
 			this.mensaje += "La contraseña no es valida, es vacia\n";
 			valido = false;
 		}
@@ -141,28 +141,28 @@ public class InicioController extends BaseController implements Initializable {
 		for (int i = 0; i < usuarios.size(); i++) {
 			int y = i;
 
-			if (usuarios.get(i).getContraseña().equals(this.txtContraseña.getText())
+			if (usuarios.get(i).getContrasenia().equals(this.txtContrasenia.getText())
 					&& usuarios.get(i).getCorreoElectronico().equals(this.txtCorreoElectronico.getText())) {
 				BaseController.usuarioInicioSesion = usuarios.get(i);
 				valido = true;
 				return valido;
 			}
 
-			if (!(usuarios.get(i).getContraseña().equals(this.txtContraseña.getText()))
+			if (!(usuarios.get(i).getContrasenia().equals(this.txtContrasenia.getText()))
 					&& usuarios.get(i).getCorreoElectronico().equals(this.txtCorreoElectronico.getText())) {
-				mensaje += "La contraseña es incorrecta.\n";
+				mensaje += "La contrasenia es incorrecta.\n";
 				valido = false;
 				return valido;
 			}
 
-			if (usuarios.get(i).getContraseña().equals(this.txtContraseña.getText())
+			if (usuarios.get(i).getContrasenia().equals(this.txtContrasenia.getText())
 					&& !(usuarios.get(i).getCorreoElectronico().equals(this.txtCorreoElectronico.getText()))) {
-				mensaje += "La contraseña o el correo electrónico son incorrectos.\n";
+				mensaje += "La contrasenia o el correo electrónico son incorrectos.\n";
 				valido = false;
 				return valido;
 			}
 
-			if (!(usuarios.get(i).getContraseña().equals(this.txtContraseña.getText()))
+			if (!(usuarios.get(i).getContrasenia().equals(this.txtContrasenia.getText()))
 					&& !(usuarios.get(i).getCorreoElectronico().equals(this.txtCorreoElectronico.getText()))) {
 				if (y != usuarios.size() - 1) {
 					continue;

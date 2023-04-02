@@ -9,7 +9,7 @@ public class Usuario implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private String usuario;
 	private String correoElectronico;
-	private String contraseña;
+	private String contrasenia;
 	private String pin;
 	
 	public String getUsuario() {
@@ -24,11 +24,11 @@ public class Usuario implements Serializable{
 	public void setCorreoElectronico(String correoElectronico) {
 		this.correoElectronico = correoElectronico;
 	}
-	public String getContraseña() {
-		return contraseña;
+	public String getContrasenia() {
+		return contrasenia;
 	}
-	public void setContraseña(String contraseña) {
-		this.contraseña = contraseña;
+	public void setContraseña(String contrasenia) {
+		this.contrasenia = contrasenia;
 	}
 	public String getPin() {
 		return pin;
@@ -39,7 +39,7 @@ public class Usuario implements Serializable{
 	
 	@Override
 	public String toString() {
-		return "Usuario [usuario=" + usuario + ", correoElectronico=" + correoElectronico + ", contraseña=" + contraseña
+		return "Usuario [usuario=" + usuario + ", correoElectronico=" + correoElectronico + ", contrasenia=" + contrasenia
 				+ ", pin=" + pin + "]\n";
 	}
  

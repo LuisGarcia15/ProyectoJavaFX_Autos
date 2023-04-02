@@ -25,7 +25,7 @@ public class AgregarNuevoAutoController extends BaseController implements Initia
 	private Button btnCancelar;
 
 	@FXML
-	private ChoiceBox<String> chcAño;
+	private ChoiceBox<String> chcAnio;
 
 	@FXML
 	private ChoiceBox<String> chcCantidad;
@@ -66,7 +66,7 @@ public class AgregarNuevoAutoController extends BaseController implements Initia
 	void nuevoAuto(ActionEvent event) {
 		if (this.verificar()) {
 			Auto auto = new Auto();
-			auto.setAño(this.chcAño.getValue());
+			auto.setAnio(this.chcAnio.getValue());
 			auto.setCantidad(this.chcCantidad.getValue());
 			auto.setEstado(this.chcEstado.getValue());
 			auto.setMarca(this.txtMarca.getText());
@@ -96,14 +96,14 @@ public class AgregarNuevoAutoController extends BaseController implements Initia
 		this.verificarEntrada(txtPrecio, TipoError.PRECIO);
 		this.verificarEntrada(txtKilometraje, TipoError.KM);
 
-		this.chcAño.getItems().addAll("Seleccione una opción:", "2010", "2011", "2012", "2013", "2014", "2015", "2016",
+		this.chcAnio.getItems().addAll("Seleccione una opcion:", "2010", "2011", "2012", "2013", "2014", "2015", "2016",
 				"2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025");
-		this.chcEstado.getItems().addAll("Seleccione una opciï¿½n:", "Nuevo", "Seminuevo");
-		this.chcTransmision.getItems().addAll("Seleccione una opciï¿½n:", "Estandar", "Automï¿½tico");
-		this.chcCantidad.getItems().addAll("Seleccione una opciï¿½n:", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
-		this.chcNumPuertas.getItems().addAll("Seleccione una opciï¿½n:", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
+		this.chcEstado.getItems().addAll("Seleccione una opcionn:", "Nuevo", "Seminuevo");
+		this.chcTransmision.getItems().addAll("Seleccione una opcion:", "Estandar", "Automatico");
+		this.chcCantidad.getItems().addAll("Seleccione una opcion:", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
+		this.chcNumPuertas.getItems().addAll("Seleccione una opcion:", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
 
-		this.chcAño.getSelectionModel().select(0);
+		this.chcAnio.getSelectionModel().select(0);
 		this.chcEstado.getSelectionModel().select(0);
 		this.chcTransmision.getSelectionModel().select(0);
 		this.chcCantidad.getSelectionModel().select(0);
@@ -128,8 +128,8 @@ public class AgregarNuevoAutoController extends BaseController implements Initia
 			valido = false;
 		}
 
-		if ((this.chcAño.getSelectionModel().getSelectedIndex() == 0)
-				|| (this.chcAño.getSelectionModel().getSelectedIndex() == -1)) {
+		if ((this.chcAnio.getSelectionModel().getSelectedIndex() == 0)
+				|| (this.chcAnio.getSelectionModel().getSelectedIndex() == -1)) {
 			this.mensaje += "Seleccione el aï¿½o de vehiculo\n";
 			valido = false;
 		}
@@ -142,13 +142,13 @@ public class AgregarNuevoAutoController extends BaseController implements Initia
 		
 		if ((this.chcNumPuertas.getSelectionModel().getSelectedIndex() == 0)
 				|| (this.chcNumPuertas.getSelectionModel().getSelectedIndex() == -1)) {
-			this.mensaje += "Seleccione el nï¿½mero de puertas del vehiculo\n";
+			this.mensaje += "Seleccione el numero de puertas del vehiculo\n";
 			valido = false;
 		}
 
 		if ((this.chcTransmision.getSelectionModel().getSelectedIndex() == 0)
 				|| (this.chcTransmision.getSelectionModel().getSelectedIndex() == -1)) {
-			this.mensaje += "Seleccione la transmisiï¿½n del vehiculo\n";
+			this.mensaje += "Seleccione la transmisionn del vehiculo\n";
 			valido = false;
 		}
 		
@@ -196,8 +196,8 @@ public class AgregarNuevoAutoController extends BaseController implements Initia
 						&& auto.get(i).getEstado().equalsIgnoreCase(this.chcEstado.getValue())
 						&& auto.get(i).getMarca().equalsIgnoreCase(this.txtMarca.getText())
 						&& auto.get(i).getTransmision().equalsIgnoreCase(this.chcTransmision.getValue())
-						&& auto.get(i).getAño().equalsIgnoreCase(this.chcAño.getValue())) {
-					this.mensaje += "No es posible crear un auto con los mismos datos de marca, modelo, Aï¿½o, trasnsmisiï¿½n, estado y color.\n";
+						&& auto.get(i).getAnio().equalsIgnoreCase(this.chcAnio.getValue())) {
+					this.mensaje += "No es posible crear un auto con los mismos datos de marca, modelo, Anio, trasnsmision, estado y color.\n";
 					valido = false;
 					return valido;
 					

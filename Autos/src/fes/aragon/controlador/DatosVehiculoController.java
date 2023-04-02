@@ -18,7 +18,7 @@ public class DatosVehiculoController extends BaseController implements Initializ
 	    private Button btnSalir;
 
 	    @FXML
-	    private TextField txtAño;
+	    private TextField txtAnio;
 
 	    @FXML
 	    private TextField txtCantidad;
@@ -53,7 +53,7 @@ public class DatosVehiculoController extends BaseController implements Initializ
     }
     
     private void deshabilitar(boolean valor){
-		this.txtAño.setDisable(valor);
+		this.txtAnio.setDisable(valor);
 		this.txtCantidad.setDisable(valor);
 		this.txtEstado.setDisable(valor);
 		this.txtKilometraje.setDisable(valor);
@@ -70,7 +70,7 @@ public class DatosVehiculoController extends BaseController implements Initializ
 		tienda = Tiendas.getObjeto().getGrupoTiendas().get(
 				Tiendas.getObjeto().getIndice());
 		this.deshabilitar(true);
-		this.txtAño.setText(tienda.getAutos().get(Tiendas.getObjeto().getIndiceAuto()).getAño());
+		this.txtAnio.setText(tienda.getAutos().get(Tiendas.getObjeto().getIndiceAuto()).getAnio());
 		this.txtCantidad.setText(String.valueOf(tienda.getAutos().get(Tiendas.getObjeto().getIndiceAuto()).getCantidad()));
 		this.txtEstado.setText(tienda.getAutos().get(Tiendas.getObjeto().getIndiceAuto()).getEstado());
 		this.txtKilometraje.setText(String.valueOf(tienda.getAutos().get(Tiendas.getObjeto().getIndiceAuto()).getKilometraje()));

@@ -9,7 +9,7 @@ public class Auto implements  Serializable{
 	private static final long serialVersionUID = 1L;
 	private String marca;
 	private String modelo;
-	private String año;//
+	private String anio;//
 	private String estado;//
 	private String numeroDePuertas;//
 	private String transmision;//
@@ -38,12 +38,12 @@ public class Auto implements  Serializable{
 		this.modelo = modelo;
 	}
 
-	public String getAño() {
-		return año;
+	public String getAnio() {
+		return anio;
 	}
 
-	public void setAño(String año) {
-		this.año = año;
+	public void setAnio(String anio) {
+		this.anio = anio;
 	}
 
 	public String getEstado() {

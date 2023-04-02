@@ -34,7 +34,7 @@ public class NuevoAutoController extends BaseController implements Initializable
     private ChoiceBox<String> chcTransmision;
     
     @FXML
-    private ChoiceBox<String> chcAño;
+    private ChoiceBox<String> chcAnio;
     
     @FXML
     private ChoiceBox<String> chcNumPuertas;
@@ -64,7 +64,7 @@ public class NuevoAutoController extends BaseController implements Initializable
     void nuevoAuto(ActionEvent event) {
     	if(this.verificar()) {
     		Auto auto = new Auto();
-    		auto.setAño(this.chcAño.getValue());
+    		auto.setAnio(this.chcAnio.getValue());
     		auto.setEstado(this.chcEstado.getValue());
     		auto.setKilometraje(Double.parseDouble(this.txtKilometraje.getText()));
     		auto.setMarca(this.txtMarca.getText());
@@ -89,7 +89,7 @@ public class NuevoAutoController extends BaseController implements Initializable
 		this.verificarEntrada(txtPrecio, TipoError.PRECIO);
 		this.verificarEntrada(txtKilometraje, TipoError.KM);
 		
-		this.chcAño.getItems().addAll("Seleccione una opción:", "2010","2011","2012"
+		this.chcAnio.getItems().addAll("Seleccione una opción:", "2010","2011","2012"
 				,"2013","2014", "2015", "2016", "2017", "2018", "2019", "2020",
 				"2021", "2022","2023", "2024", "2025");
 		this.chcEstado.getItems().addAll("Seleccione una opción:", "Nuevo", "Seminuevo");
@@ -98,7 +98,7 @@ public class NuevoAutoController extends BaseController implements Initializable
 		this.chcCantidad.getItems().addAll("Seleccione una opción:", "1","2","3","4","5","6","7","8","9","10");
 		this.chcNumPuertas.getItems().addAll("Seleccione una opción:", "1","2","3","4","5","6","7","8","9","10");
 		
-		this.chcAño.getSelectionModel().select(0);
+		this.chcAnio.getSelectionModel().select(0);
 		this.chcEstado.getSelectionModel().select(0);
 		this.chcTransmision.getSelectionModel().select(0);
 		this.chcCantidad.getSelectionModel().select(0);
@@ -122,8 +122,8 @@ public class NuevoAutoController extends BaseController implements Initializable
 			valido = false;
 		}
 
-		if ((this.chcAño.getSelectionModel().getSelectedIndex() == 0)
-				|| (this.chcAño.getSelectionModel().getSelectedIndex() == -1)) {
+		if ((this.chcAnio.getSelectionModel().getSelectedIndex() == 0)
+				|| (this.chcAnio.getSelectionModel().getSelectedIndex() == -1)) {
 			this.mensaje += "Seleccione el año de vehiculo\n";
 			valido = false;
 		}

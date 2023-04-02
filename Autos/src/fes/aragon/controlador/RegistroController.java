@@ -31,7 +31,7 @@ public class RegistroController extends BaseController implements Initializable 
 	private Button btnCerrar;
 
 	@FXML
-	private TextField txtContraseña;
+	private TextField txtContrasenia;
 
 	@FXML
 	private TextField txtCorreoElectronico;
@@ -47,7 +47,7 @@ public class RegistroController extends BaseController implements Initializable 
 		if (verificar() && verificarDuplicado()) {
 			this.usuario.setUsuario(this.txtUsuario.getText());
 			this.usuario.setCorreoElectronico(this.txtCorreoElectronico.getText());
-			this.usuario.setContraseña(this.txtContraseña.getText());
+			this.usuario.setContraseña(this.txtContrasenia.getText());
 			this.usuario.setPin(this.txtPin.getText());
 			UsuariosArchivo.getUsuarios().getListaUsuarios().add(usuario);
 			this.escrituraArchivo();
@@ -71,7 +71,7 @@ public class RegistroController extends BaseController implements Initializable 
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		this.verificarEntrada(txtUsuario, TipoError.USUARIO);
 		this.verificarEntrada(txtCorreoElectronico, TipoError.CORREO);
-		this.verificarEntrada(txtContraseña, TipoError.CONTRASEÑA);
+		this.verificarEntrada(txtContrasenia, TipoError.CONTRASENIA);
 		this.verificarEntrada(txtPin, TipoError.PIN);
 
 		File f = new File(System.getProperty("user.dir") + "/Usuarios/usuarios.fes");
@@ -106,8 +106,8 @@ public class RegistroController extends BaseController implements Initializable 
 			valido = false;
 		}
 
-		if (!this.contraseñaValido) {
-			this.mensaje += "La contraseña no es valida, esta mal estructurado, debe contener"
+		if (!this.contraseniaValido) {
+			this.mensaje += "La contrasenia no es valida, esta mal estructurado, debe contener"
 					+ " la primera letra en mayúscula seguido de entre 5  a 7 caracteres libres.\n\n";
 			valido = false;
 		}
@@ -130,9 +130,9 @@ public class RegistroController extends BaseController implements Initializable 
 			valido = false;
 		}
 
-		if ((this.txtContraseña.getText() == null)
-				|| (this.txtContraseña.getText() != null && this.txtContraseña.getText().isEmpty())) {
-			this.mensaje += "La contraseña no es valida, es vacia\n";
+		if ((this.txtContrasenia.getText() == null)
+				|| (this.txtContrasenia.getText() != null && this.txtContrasenia.getText().isEmpty())) {
+			this.mensaje += "La contrasenia no es valida, es vacia\n";
 			valido = false;
 		}
 

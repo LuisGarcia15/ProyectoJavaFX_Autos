@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="814.0" style="-fx-background-color: #003478;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fes.aragon.controlador.DatosVehiculoController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="814.0" style="-fx-background-color: #003478;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fes.aragon.controlador.DatosVehiculoController">
    <children>
       <Label layoutX="86.0" layoutY="41.0" prefHeight="30.0" prefWidth="227.0" text="Datos del vehiculo" textFill="WHITE">
          <font>
@@ -42,7 +42,7 @@
             <TextField fx:id="txtMarca" editable="false" prefHeight="25.0" prefWidth="532.0" />
             <TextField fx:id="txtModelo" prefHeight="25.0" prefWidth="532.0" />
             <TextField fx:id="txtEstado" prefHeight="25.0" prefWidth="532.0" />
-            <TextField fx:id="txtAño" prefHeight="25.0" prefWidth="532.0" />
+            <TextField fx:id="txtAnio" prefHeight="25.0" prefWidth="532.0" />
             <TextField fx:id="txtNumeroPuertas" prefHeight="21.0" prefWidth="532.0" />
             <TextField fx:id="txtTransmision" />
             <TextField fx:id="txtCantidad" layoutX="10.0" layoutY="235.0" />

@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="1258.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fes.aragon.controlador.ListaAutosController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="1258.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fes.aragon.controlador.ListaAutosController">
    <children>
       <ImageView fitHeight="508.0" fitWidth="1258.0" pickOnBounds="true">
          <image>
@@ -23,7 +23,7 @@
         <columns>
           <TableColumn fx:id="clmMarca" prefWidth="137.0" text="Marca" />
           <TableColumn fx:id="clmModelo" prefWidth="120.0" text="Modelo" />
-            <TableColumn fx:id="clmAño" prefWidth="143.0" text="Año" />
+            <TableColumn fx:id="clmAnio" prefWidth="143.0" text="Año" />
             <TableColumn fx:id="clmEstado" prefWidth="143.0" text="Estado" />
             <TableColumn fx:id="clmNumPuertas" minWidth="0.0" prefWidth="112.0" text="Núm. de Puertas" />
             <TableColumn fx:id="clmTrasmision" minWidth="0.0" prefWidth="152.0" text="Transmisión" />

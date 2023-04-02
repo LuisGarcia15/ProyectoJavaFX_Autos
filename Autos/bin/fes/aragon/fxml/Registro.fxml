@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fes.aragon.controlador.RegistroController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fes.aragon.controlador.RegistroController">
    <bottom>
       <HBox prefHeight="54.0" prefWidth="600.0" spacing="250.0" BorderPane.alignment="CENTER">
          <children>
@@ -93,7 +93,7 @@
          <children>
             <TextField fx:id="txtUsuario" layoutX="10.0" layoutY="40.0" stylesheets="@../css/application.css" />
             <TextField fx:id="txtCorreoElectronico" stylesheets="@../css/application.css" />
-            <TextField fx:id="txtContraseña" stylesheets="@../css/application.css">
+            <TextField fx:id="txtContrasenia" stylesheets="@../css/application.css">
                <VBox.margin>
                   <Insets />
                </VBox.margin></TextField>

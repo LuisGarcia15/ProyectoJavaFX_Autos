@@ -46,7 +46,7 @@ public class BaseController {
 	protected boolean kmValido = true;
 	protected boolean edadValido = false;
 	protected boolean pinValido = true;
-	protected boolean contraseñaValido = true;
+	protected boolean contraseniaValido = true;
 	protected boolean usuarioValido = true;
 
 	private String[] expresiones = {"(\\d+)(\\.\\d{1,2})","(\\d+)(\\.\\d{1,2})", "(\\w){13}",
@@ -90,8 +90,8 @@ public class BaseController {
 			if(error == TipoError.PIN) {
 				 this.pinValido = match.matches();
 			 }
-			if(error == TipoError.CONTRASEÑA) {
-				 this.contraseñaValido = match.matches();
+			if(error == TipoError.CONTRASENIA) {
+				 this.contraseniaValido = match.matches();
 			 }
 			if(error == TipoError.USUARIO) {
 				 this.usuarioValido = match.matches();
