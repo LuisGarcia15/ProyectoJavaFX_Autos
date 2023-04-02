@@ -99,8 +99,8 @@ public class TiendaController extends BaseController implements Initializable{
 		this.verificarEntrada(txtTelefono, TipoError.TELEFONO);
 		this.chcEstado.getItems().addAll("Selecciona una fila:","Aguascalientes","Baja California", "Baja California Sur", "Campeche",
 				"Chiapas", "Chihuahua","Ciudad de Mexico", "Coahuila", "Colima", "Durango", "Estado de Mexico", "Guanajuato", "Guerrero",
-				"Hidalgo", "Jalisco", "Michoacan", "Morelos", "Nayarit", "Nuevo León", "Oaxaca", "Puebla", "Queretaro", "Quintana Roo", 
-				"San Luis Potosí", "Sinaloa", "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz", "Yucatan"	, "Zacatecas");
+				"Hidalgo", "Jalisco", "Michoacan", "Morelos", "Nayarit", "Nuevo Leon", "Oaxaca", "Puebla", "Queretaro", "Quintana Roo", 
+				"San Luis Potosi", "Sinaloa", "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz", "Yucatan"	, "Zacatecas");
 		this.chcEstado.getSelectionModel().select(0);
 		
 		tienda = Tiendas.getObjeto().getGrupoTiendas().get(
@@ -157,7 +157,7 @@ public class TiendaController extends BaseController implements Initializable{
 				this.tienda.getGerenteVentas().getRfc() == null  ||
 				this.tienda.getGerenteVentas().getTelefono() == null ||
 				String.valueOf(this.tienda.getGerenteVentas().getEdad()) == null) {
-				this.mensaje += "No se ha asignado correctamente algún gerente para esta tienda. \n";
+				this.mensaje += "No se ha asignado correctamente algun gerente para esta tienda. \n";
 				valido = false;
 				return valido;
 			}

@@ -47,7 +47,7 @@ public class RegistroController extends BaseController implements Initializable 
 		if (verificar() && verificarDuplicado()) {
 			this.usuario.setUsuario(this.txtUsuario.getText());
 			this.usuario.setCorreoElectronico(this.txtCorreoElectronico.getText());
-			this.usuario.setContraseña(this.txtContrasenia.getText());
+			this.usuario.setContrasenia(this.txtContrasenia.getText());
 			this.usuario.setPin(this.txtPin.getText());
 			UsuariosArchivo.getUsuarios().getListaUsuarios().add(usuario);
 			this.escrituraArchivo();
@@ -114,7 +114,7 @@ public class RegistroController extends BaseController implements Initializable 
 
 		if (!this.pinValido) {
 			this.mensaje += "El pin no es valido, debe de ser de 4 digitos, el primer y ultimo caracter"
-					+ " no deben ser números ceros.\n\n";
+					+ " no deben ser numeros ceros.\n\n";
 			valido = false;
 		}
 

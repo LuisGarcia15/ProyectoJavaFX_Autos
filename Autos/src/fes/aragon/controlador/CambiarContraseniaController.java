@@ -124,7 +124,7 @@ public class CambiarContraseniaController extends BaseController implements Init
 					this.mensaje += "No es posible cambiar la contrasenia por otra que este en uso. \n";
 					return valido;
 				}else {
-				UsuariosArchivo.getUsuarios().getListaUsuarios().get(i).setContraseña(this.txtNuevaContrasena.getText());
+				UsuariosArchivo.getUsuarios().getListaUsuarios().get(i).setContrasenia(this.txtNuevaContrasena.getText());
 				this.escrituraArchivo();
 				valido = true;
 				return valido;

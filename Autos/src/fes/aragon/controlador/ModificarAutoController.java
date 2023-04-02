@@ -213,7 +213,7 @@ public class ModificarAutoController extends BaseController implements Initializ
 			&& auto.get(i).getMarca().equalsIgnoreCase(this.txtMarca.getText())
 			&& auto.get(i).getTransmision().equalsIgnoreCase(this.chcTransmision.getValue())
 			&& auto.get(i).getAnio().equalsIgnoreCase(this.chcAnio.getValue())) {
-				this.mensaje += "No es posible modificar un auto con los mismos datos de marca, modelo, Año, trasnsmisión, estado y color.\n";
+				this.mensaje += "No es posible modificar un auto con los mismos datos de marca, modelo, Anio, trasnsmision, estado y color.\n";
 				validoColor = false;
 				validoEstado = false;
 				validoModelo = false;

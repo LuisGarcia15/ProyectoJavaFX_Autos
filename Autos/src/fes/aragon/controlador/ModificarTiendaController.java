@@ -89,9 +89,9 @@ public class ModificarTiendaController extends BaseController implements Initial
 		this.verificarEntrada(txtCorreo, TipoError.CORREO);
 		this.verificarEntrada(txtTelefono, TipoError.TELEFONO);
 		this.chcEstado.getItems().addAll("Selecciona una fila","Aguascalientes","Baja California", "Baja California Sur", "Campeche",
-				"Chiapas", "Chihuahua","Ciudad de México", "Coahuila", "Colima", "Durango", "Estado de México", "Guanajuato", "Guerrero",
-				"Hidalgo", "Jalisco", "Michoacán", "Morelos", "Nayarit", "Nuevo León", "Oaxaca", "Puebla", "Querétaro", "Quintana Roo", 
-				"San Luis Potosí", "Sinaloa", "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz", "Yucatán"	, "Zacatecas");
+				"Chiapas", "Chihuahua","Ciudad de Mexico", "Coahuila", "Colima", "Durango", "Estado de Mexico", "Guanajuato", "Guerrero",
+				"Hidalgo", "Jalisco", "Michoacan", "Morelos", "Nayarit", "Nuevo Leon", "Oaxaca", "Puebla", "Queretaro", "Quintana Roo", 
+				"San Luis Potosi", "Sinaloa", "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz", "Yucatan"	, "Zacatecas");
 		
 		this.txtCorreo.setText(tienda.getCorreo());
 		this.txtDireccion.setText(tienda.getDireccion());

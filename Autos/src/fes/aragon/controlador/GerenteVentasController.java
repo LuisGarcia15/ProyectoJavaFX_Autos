@@ -115,7 +115,7 @@ public class GerenteVentasController extends BaseController implements Initializ
 
 		try {
 			if (Integer.parseInt(this.txtEdad.getText()) < 18 || Integer.parseInt(this.txtEdad.getText()) > 60) {
-				this.mensaje += "La edad no es valida, no esta dentro del rango debe ser mayor a 18 y menor a 60 años.\n";
+				this.mensaje += "La edad no es valida, no esta dentro del rango debe ser mayor a 18 y menor a 60 anios.\n";
 				valido = false;
 			}
 		} catch (NumberFormatException e) {
@@ -127,7 +127,7 @@ public class GerenteVentasController extends BaseController implements Initializ
 		}
 
 		if (!this.rfcValido) {
-			this.mensaje += "El RFC de Gerente no es valido, minimo 13, máximo 13 caracteres\n";
+			this.mensaje += "El RFC de Gerente no es valido, minimo 13, maximo 13 caracteres\n";
 			valido = false;
 		}
 
