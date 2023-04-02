@@ -89,14 +89,14 @@ public class NuevoAutoController extends BaseController implements Initializable
 		this.verificarEntrada(txtPrecio, TipoError.PRECIO);
 		this.verificarEntrada(txtKilometraje, TipoError.KM);
 		
-		this.chcAnio.getItems().addAll("Seleccione una opción:", "2010","2011","2012"
+		this.chcAnio.getItems().addAll("Seleccione una opcion:", "2010","2011","2012"
 				,"2013","2014", "2015", "2016", "2017", "2018", "2019", "2020",
 				"2021", "2022","2023", "2024", "2025");
-		this.chcEstado.getItems().addAll("Seleccione una opción:", "Nuevo", "Seminuevo");
-		this.chcTransmision.getItems().addAll("Seleccione una opción: ", "Estandar",
+		this.chcEstado.getItems().addAll("Seleccione una opcion:", "Nuevo", "Seminuevo");
+		this.chcTransmision.getItems().addAll("Seleccione una opcion: ", "Estandar",
 				"Automático");
-		this.chcCantidad.getItems().addAll("Seleccione una opción:", "1","2","3","4","5","6","7","8","9","10");
-		this.chcNumPuertas.getItems().addAll("Seleccione una opción:", "1","2","3","4","5","6","7","8","9","10");
+		this.chcCantidad.getItems().addAll("Seleccione una opcion:", "1","2","3","4","5","6","7","8","9","10");
+		this.chcNumPuertas.getItems().addAll("Seleccione una opcion:", "1","2","3","4","5","6","7","8","9","10");
 		
 		this.chcAnio.getSelectionModel().select(0);
 		this.chcEstado.getSelectionModel().select(0);
@@ -124,7 +124,7 @@ public class NuevoAutoController extends BaseController implements Initializable
 
 		if ((this.chcAnio.getSelectionModel().getSelectedIndex() == 0)
 				|| (this.chcAnio.getSelectionModel().getSelectedIndex() == -1)) {
-			this.mensaje += "Seleccione el año de vehiculo\n";
+			this.mensaje += "Seleccione el anio de vehiculo\n";
 			valido = false;
 		}
 
@@ -136,13 +136,13 @@ public class NuevoAutoController extends BaseController implements Initializable
 		
 		if ((this.chcNumPuertas.getSelectionModel().getSelectedIndex() == 0)
 				|| (this.chcNumPuertas.getSelectionModel().getSelectedIndex() == -1)) {
-			this.mensaje += "Seleccione el número de puertas del vehiculo\n";
+			this.mensaje += "Seleccione el numero de puertas del vehiculo\n";
 			valido = false;
 		}
 
 		if ((this.chcTransmision.getSelectionModel().getSelectedIndex() == 0)
 				|| (this.chcTransmision.getSelectionModel().getSelectedIndex() == -1)) {
-			this.mensaje += "Seleccione la transmisión del vehiculo\n";
+			this.mensaje += "Seleccione la transmision del vehiculo\n";
 			valido = false;
 		}
 		

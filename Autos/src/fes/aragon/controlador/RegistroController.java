@@ -54,7 +54,7 @@ public class RegistroController extends BaseController implements Initializable 
 			this.cerrarVentana(btnAceptar);
 			this.pinValido = true;
 			this.ventanaEmergente("PIN", "Recuerde su PIN",
-					"Con el PIN podra modificar aspectos importantes de la aplicación, " + " NO SE PUEDE MODIFICAR");
+					"Con el PIN podra modificar aspectos importantes de la aplicacion, " + " NO SE PUEDE MODIFICAR");
 		} else {
 			this.ventanaEmergente("Error", "Datos Erroneos", this.mensaje);
 			mensaje = "";
@@ -96,7 +96,7 @@ public class RegistroController extends BaseController implements Initializable 
 		boolean valido = true;
 
 		if (!this.usuarioValido) {
-			this.mensaje += "El usuario no es valido, esta mál estructurado, debe contener"
+			this.mensaje += "El usuario no es valido, esta mal estructurado, debe contener"
 					+ " el primer elemento como letra seguido de entre 5 a 12 caracteres libres.\n\n";
 			valido = false;
 		}
@@ -108,12 +108,12 @@ public class RegistroController extends BaseController implements Initializable 
 
 		if (!this.contraseniaValido) {
 			this.mensaje += "La contrasenia no es valida, esta mal estructurado, debe contener"
-					+ " la primera letra en mayúscula seguido de entre 5  a 7 caracteres libres.\n\n";
+					+ " la primera letra en mayuscula seguido de entre 5  a 7 caracteres libres.\n\n";
 			valido = false;
 		}
 
 		if (!this.pinValido) {
-			this.mensaje += "El pin no es valido, debe de ser de 4 dígitos, el primer y último caracter"
+			this.mensaje += "El pin no es valido, debe de ser de 4 digitos, el primer y ultimo caracter"
 					+ " no deben ser números ceros.\n\n";
 			valido = false;
 		}
@@ -126,7 +126,7 @@ public class RegistroController extends BaseController implements Initializable 
 
 		if ((this.txtCorreoElectronico.getText() == null)
 				|| (this.txtCorreoElectronico.getText() != null && this.txtCorreoElectronico.getText().isEmpty())) {
-			this.mensaje += "El correo electrónico no es valido, es vacio\n";
+			this.mensaje += "El correo electronico no es valido, es vacio\n";
 			valido = false;
 		}
 

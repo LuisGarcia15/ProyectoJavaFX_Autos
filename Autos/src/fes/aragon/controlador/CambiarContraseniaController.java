@@ -86,27 +86,27 @@ public class CambiarContraseniaController extends BaseController implements Init
 		}
 
 		if (!this.contraseniaValido) {
-			this.mensaje += "La contraseña no es valida, esta mal estructurado, debe contener"
-					+ " la primera letra en mayúscula seguido de entre 5  a 7 caracteres libres.\n\n";
+			this.mensaje += "La contrasenia no es valida, esta mal estructurado, debe contener"
+					+ " la primera letra en mayuscula seguido de entre 5  a 7 caracteres libres.\n\n";
 			valido = false;
 		}
 
 
 		if ((this.txtNuevaContrasena.getText() == null)
 				|| (this.txtNuevaContrasena.getText() != null && this.txtNuevaContrasena.getText().isEmpty())) {
-			this.mensaje += "La nueva contraseña no es valida, es vacia\n";
+			this.mensaje += "La nueva contrasenia no es valida, es vacia\n";
 			valido = false;
 		}
 
 		if ((this.txtCorreo.getText() == null)
 				|| (this.txtCorreo.getText() != null && this.txtCorreo.getText().isEmpty())) {
-			this.mensaje += "El correo electrónico no es valido, es vacio\n";
+			this.mensaje += "El correo electronico no es valido, es vacio\n";
 			valido = false;
 		}
 
 		if ((this.txtContrasenaAnterior.getText() == null)
 				|| (this.txtContrasenaAnterior.getText() != null && this.txtContrasenaAnterior.getText().isEmpty())) {
-			this.mensaje += "La contraseña anterior no es valida, es vacia\n";
+			this.mensaje += "La contrasenia anterior no es valida, es vacia\n";
 			valido = false;
 		}
 
@@ -121,7 +121,7 @@ public class CambiarContraseniaController extends BaseController implements Init
 					&& usuarios.get(i).getCorreoElectronico().equals(this.txtCorreo.getText())) {
 				
 				if(usuarios.get(i).getContrasenia().equals(this.txtNuevaContrasena.getText())) {
-					this.mensaje += "No es posible cambiar la contraseña por otra que este en uso. \n";
+					this.mensaje += "No es posible cambiar la contrasenia por otra que este en uso. \n";
 					return valido;
 				}else {
 				UsuariosArchivo.getUsuarios().getListaUsuarios().get(i).setContraseña(this.txtNuevaContrasena.getText());
@@ -131,7 +131,7 @@ public class CambiarContraseniaController extends BaseController implements Init
 				}
 			}
 		}
-		this.mensaje = "El correo electrónico o la contraseña es incorrecta.\n";
+		this.mensaje = "El correo electronico o la contrasenia es incorrecta.\n";
 		return valido;
 	}
     

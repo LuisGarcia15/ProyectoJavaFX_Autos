@@ -109,7 +109,7 @@ public class GerenteVentasController extends BaseController implements Initializ
 		}
 
 		if (!this.edadValido) {
-			this.mensaje += "La edad es incorrecta, esta mal estructurada, debe de ser un número de dos dígitos.\n";
+			this.mensaje += "La edad es incorrecta, esta mal estructurada, debe de ser un numero de dos digitos.\n";
 			valido = false;
 		}
 
@@ -127,7 +127,7 @@ public class GerenteVentasController extends BaseController implements Initializ
 		}
 
 		if (!this.rfcValido) {
-			this.mensaje += "El RFC de Gerente no es valido, mínimo 13, máximo 13 caracteres\n";
+			this.mensaje += "El RFC de Gerente no es valido, minimo 13, máximo 13 caracteres\n";
 			valido = false;
 		}
 
@@ -149,7 +149,7 @@ public class GerenteVentasController extends BaseController implements Initializ
 		}
 
 		if (!this.telefonoValido) {
-			this.mensaje += "El telefono del hotel no es válido, mínimo 10, máximo 10 números\n";
+			this.mensaje += "El telefono del hotel no es valido, minimo 10, maximo 10 numeros\n";
 			valido = false;
 		}
 		return valido;
@@ -164,7 +164,7 @@ public class GerenteVentasController extends BaseController implements Initializ
 		for (int i = 0; i < tiendas.size()-1; i++) {
 				if (tiendas.get(i).getGerenteVentas().getTelefono().equalsIgnoreCase(this.txtTelefono.getText())
 						&& validoTelefono) {
-					mensaje += "No es posible crear un gerente con el mismo teléfono.\n";
+					mensaje += "No es posible crear un gerente con el mismo telefono.\n";
 					valido = false;
 					validoTelefono = false;
 				}

@@ -109,7 +109,7 @@ public class ModificarTiendaController extends BaseController implements Initial
 		}
 		
 		if((this.txtDireccion.getText() == null) || (this.txtDireccion.getText() != null && this.txtDireccion.getText().isEmpty())) {
-			this.mensaje += "La dirección de la tienda no es valida, es vacio\n";
+			this.mensaje += "La direccion de la tienda no es valida, es vacio\n";
 			valido = false;
 		}
 		
@@ -135,7 +135,7 @@ public class ModificarTiendaController extends BaseController implements Initial
 		}
 
 		if(!this.telefonoValido) {
-			this.mensaje += "El telefono del hotel no es válido, mínimo 10, máximo 10 números\n";
+			this.mensaje += "El telefono del hotel no es valido, minimo 10, maximo 10 numeros\n";
 			valido = false;
 		}
 		
@@ -155,7 +155,7 @@ public class ModificarTiendaController extends BaseController implements Initial
 			}
 			if(tiendas.get(i).getEstado().equals(this.chcEstado.getValue()) && 
 					tiendas.get(i).getDireccion().equals(this.txtDireccion.getText())) {
-				mensaje += "No es posible crear una tienda con la misma dirección y estado.\n";
+				mensaje += "No es posible crear una tienda con la misma direccion y estado.\n";
 				valido = false;
 				validoDireccion = false;
 				}

@@ -13,7 +13,7 @@ public class Auto implements  Serializable{
 	private String estado;//
 	private String numeroDePuertas;//
 	private String transmision;//
-	private String cantidad;//v
+	private String cantidad;//
 	private String color;
 	private double precio;
 	private double kilometraje;

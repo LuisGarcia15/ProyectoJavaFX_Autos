@@ -98,7 +98,7 @@ public class AgregarNuevoAutoController extends BaseController implements Initia
 
 		this.chcAnio.getItems().addAll("Seleccione una opcion:", "2010", "2011", "2012", "2013", "2014", "2015", "2016",
 				"2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025");
-		this.chcEstado.getItems().addAll("Seleccione una opcionn:", "Nuevo", "Seminuevo");
+		this.chcEstado.getItems().addAll("Seleccione una opcion:", "Nuevo", "Seminuevo");
 		this.chcTransmision.getItems().addAll("Seleccione una opcion:", "Estandar", "Automatico");
 		this.chcCantidad.getItems().addAll("Seleccione una opcion:", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
 		this.chcNumPuertas.getItems().addAll("Seleccione una opcion:", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
@@ -130,7 +130,7 @@ public class AgregarNuevoAutoController extends BaseController implements Initia
 
 		if ((this.chcAnio.getSelectionModel().getSelectedIndex() == 0)
 				|| (this.chcAnio.getSelectionModel().getSelectedIndex() == -1)) {
-			this.mensaje += "Seleccione el a�o de vehiculo\n";
+			this.mensaje += "Seleccione el anio de vehiculo\n";
 			valido = false;
 		}
 
@@ -148,7 +148,7 @@ public class AgregarNuevoAutoController extends BaseController implements Initia
 
 		if ((this.chcTransmision.getSelectionModel().getSelectedIndex() == 0)
 				|| (this.chcTransmision.getSelectionModel().getSelectedIndex() == -1)) {
-			this.mensaje += "Seleccione la transmisionn del vehiculo\n";
+			this.mensaje += "Seleccione la transmision del vehiculo\n";
 			valido = false;
 		}
 		

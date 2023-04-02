@@ -94,20 +94,20 @@ public class InicioController extends BaseController implements Initializable {
 		}
 
 		if (!this.contraseniaValido) {
-			this.mensaje += "La contraseña no es valida, esta mal estructurado, debe contener"
-					+ " la primera letra en mayúscula seguido de entre 5  a 7 caracteres libres.\n\n";
+			this.mensaje += "La contrasenia no es valida, esta mal estructurado, debe contener"
+					+ " la primera letra en mayuscula seguido de entre 5  a 7 caracteres libres.\n\n";
 			valido = false;
 		}
 
 		if ((this.txtCorreoElectronico.getText() == null)
 				|| (this.txtCorreoElectronico.getText() != null && this.txtCorreoElectronico.getText().isEmpty())) {
-			this.mensaje += "El correo electrónico no es valido, es vacio\n";
+			this.mensaje += "El correo electronico no es valido, es vacio\n";
 			valido = false;
 		}
 
 		if ((this.txtContrasenia.getText() == null)
 				|| (this.txtContrasenia.getText() != null && this.txtContrasenia.getText().isEmpty())) {
-			this.mensaje += "La contraseña no es valida, es vacia\n";
+			this.mensaje += "La contrasenia no es valida, es vacia\n";
 			valido = false;
 		}
 

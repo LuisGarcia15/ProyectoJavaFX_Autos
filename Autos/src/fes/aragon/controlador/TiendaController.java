@@ -98,9 +98,9 @@ public class TiendaController extends BaseController implements Initializable{
 		this.verificarEntrada(txtCorreo, TipoError.CORREO);
 		this.verificarEntrada(txtTelefono, TipoError.TELEFONO);
 		this.chcEstado.getItems().addAll("Selecciona una fila:","Aguascalientes","Baja California", "Baja California Sur", "Campeche",
-				"Chiapas", "Chihuahua","Ciudad de México", "Coahuila", "Colima", "Durango", "Estado de México", "Guanajuato", "Guerrero",
-				"Hidalgo", "Jalisco", "Michoacán", "Morelos", "Nayarit", "Nuevo León", "Oaxaca", "Puebla", "Querétaro", "Quintana Roo", 
-				"San Luis Potosí", "Sinaloa", "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz", "Yucatán"	, "Zacatecas");
+				"Chiapas", "Chihuahua","Ciudad de Mexico", "Coahuila", "Colima", "Durango", "Estado de Mexico", "Guanajuato", "Guerrero",
+				"Hidalgo", "Jalisco", "Michoacan", "Morelos", "Nayarit", "Nuevo León", "Oaxaca", "Puebla", "Queretaro", "Quintana Roo", 
+				"San Luis Potosí", "Sinaloa", "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz", "Yucatan"	, "Zacatecas");
 		this.chcEstado.getSelectionModel().select(0);
 		
 		tienda = Tiendas.getObjeto().getGrupoTiendas().get(
@@ -115,7 +115,7 @@ public class TiendaController extends BaseController implements Initializable{
 		}
 		
 		if((this.txtDireccion.getText() == null) || (this.txtDireccion.getText() != null && this.txtDireccion.getText().isEmpty())) {
-			this.mensaje += "La dirección de la tienda no es valida, es vacio\n";
+			this.mensaje += "La direccion de la tienda no es valida, es vacio\n";
 			valido = false;
 		}
 		
@@ -141,7 +141,7 @@ public class TiendaController extends BaseController implements Initializable{
 		}
 
 		if(!this.telefonoValido) {
-			this.mensaje += "El telefono del hotel no es válido, mínimo 10, máximo 10 números\n";
+			this.mensaje += "El telefono del hotel no es valido, minimo 10, maximo 10 numeros\n";
 			valido = false;
 		}
 		
@@ -177,7 +177,7 @@ public class TiendaController extends BaseController implements Initializable{
 			}
 			if(tiendas.get(i).getEstado().equals(this.chcEstado.getValue()) && 
 					tiendas.get(i).getDireccion().equals(this.txtDireccion.getText())) {
-				mensaje += "No es posible crear una tienda con la misma dirección y estado.\n";
+				mensaje += "No es posible crear una tienda con la misma direccion y estado.\n";
 				valido = false;
 				validoDireccion = false;
 				}
