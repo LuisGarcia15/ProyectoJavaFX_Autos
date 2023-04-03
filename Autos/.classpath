@@ -13,8 +13,6 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="jar/fontawesomefx-commons-9.1.2.jar"/>
 	<classpathentry kind="lib" path="jar/fontawesomefx-fontawesome-4.7.0-9.1.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/fakay/Downloads/Proyecto_Autos_JavaFX/fontawesomefx-glyphsbrowser-all-1.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/fakay/Downloads/Proyecto_Autos_JavaFX/fontawesomefx-fontawesome-4.7.0-9.1.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/fakay/Downloads/Proyecto_Autos_JavaFX/fontawesomefx-commons-9.1.2.jar"/>
+	<classpathentry kind="lib" path="jar/fontawesomefx-glyphsbrowser-all-1.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
