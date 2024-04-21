@@ -122,7 +122,7 @@ public class ListaAutosController extends BaseController implements Initializabl
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		this.tienda = Tiendas.getObjeto().getGrupoTiendas().get(
 				Tiendas.getObjeto().getIndice());
-		this.clmAnio.setCellValueFactory(new PropertyValueFactory<>("año"));
+		this.clmAnio.setCellValueFactory(new PropertyValueFactory<>("anio"));
 		this.clmEstado.setCellValueFactory(new PropertyValueFactory<>("estado"));
 		this.clmKilometraje.setCellValueFactory(new PropertyValueFactory<>("kilometraje"));
 		this.clmMarca.setCellValueFactory(new PropertyValueFactory<>("marca"));
